@@ -1,6 +1,7 @@
 package com.example.newsappwithcleanarchitecture.viewmodel
 
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -37,7 +38,7 @@ class MainPageViewModel @Inject constructor(
     private var currentQuery = SearchRequest("")
     private var lastQuery = currentQuery
 
-    var filterDateRange by mutableStateOf(4) // This is SearchRange.YEAR
+    var filterDateRange by mutableIntStateOf(4) // This is SearchRange.YEAR
 
     // For UI states
     var searchQuery by mutableStateOf("")
